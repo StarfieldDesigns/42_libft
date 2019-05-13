@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aholtzma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/13 15:52:09 by aholtzma          #+#    #+#             */
+/*   Updated: 2019/05/13 15:52:34 by aholtzma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *dest, size_t len)
+void	ft_bzero(void *dest, size_t len)
 {
-    ft_memset(dest, 0, len);
+	ft_memset(dest, 0, len);
 }

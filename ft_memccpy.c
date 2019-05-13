@@ -1,31 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aholtzma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/13 15:57:34 by aholtzma          #+#    #+#             */
+/*   Updated: 2019/05/13 15:57:44 by aholtzma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-static void    *ft_memchr(const void *str, int c, size_t len)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t len)
 {
-    unsigned char *s;
+	void *str;
 
-    s = (unsigned char *)str;
-    while (len--)
-    {
-        if (*s != (unsigned char)c
-            s++;
-        else                                        
-            return (s);                                               
-    }
-    return (NULL);                    
-}
-
-void    *ft_memccpy(void *dest, const void *src, int c, size_t len)
-{
-    void *str;
-
-    str = ft_memchr(src, c, len);
-    if (str == NULL)
-    {
-        ft_memcpy(dest, src, len);
-        return (NULL);
-    }
-    ft_memcpy(dest, src, (str - src + 1));
-    return (dest);
+	str = ft_memchr(src, c, len);
+	if (str == NULL)
+	{
+		ft_memcpy(dest, src, len);
+		return (NULL);
+	}
+	ft_memcpy(dest, src, (str - src + 1));
+	return (dest);
 }
