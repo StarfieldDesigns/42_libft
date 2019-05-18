@@ -22,4 +22,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t len);
 void	*ft_memchr(const void *str, int c, size_t len);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t len);
+int		ft_strlen(char *str);
+char	*ft_strdup(char *src);
+char 	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
+char	*ft_strstr(const char *source, const char *substr);
+
 #endif
