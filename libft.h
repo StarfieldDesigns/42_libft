@@ -27,5 +27,8 @@ char	*ft_strdup(char *src);
 char 	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 char	*ft_strstr(const char *source, const char *substr);
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dest, cost char *src, size_t size);
 
 #endif
