@@ -15,7 +15,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *dest, size_t len);
 void	*ft_memcpy(void *dest, const void *src, size_t len);
@@ -50,6 +50,12 @@ void	ft_striteri(char*s, void (*f)(unsigned int, char *));
 char	*ft_strnew(size_t size);
 char	*ft_strmap(const char *s, char (*f)(char));
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-
+int		ft_strequ(const char *s1, const char *s2);
+int		ft_strnequ(const char *s1, const char *s2, size_t n);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strtrim(const char *s);
+char	**ft_strsplit(const char *s, char c);
+int		ft_wordcount(char *s, char c);
 
 #endif
