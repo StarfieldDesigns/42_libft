@@ -23,6 +23,7 @@ void	*ft_memchr(const void *str, int c, size_t len);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t len);
 int		ft_memcmp(const void *s1, const void *s2, size_t len);
 size_t	ft_strlen(const char *str);
+int		ft_strlen2(const char *s, int i, char c);
 char	*ft_strdup(char *src);
 char 	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
@@ -56,6 +57,8 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s);
 char	**ft_strsplit(const char *s, char c);
-int		ft_wordcount(char *s, char c);
+int		ft_wordcount(const char *s, char c);
+char	*ft_itoa(int n);
+char	*ft_strrev(char *str);
 
 #endif
