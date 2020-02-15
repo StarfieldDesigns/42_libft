@@ -1,31 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aholtzma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/14 15:18:32 by aholtzma          #+#    #+#             */
+/*   Updated: 2020/02/14 16:33:47 by aholtzma         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+int		count_digits(unsigned int n)
+{
+	int digits;
+
+	digits = 1;
+
+	while ((n /= 10) > 0)
+		digits++;
+
+	return (digits);	
+}
+
 char	*ft_itoa(int n)
 {
 	char *str;
-	int rem;
-	int a;
+	unsigned int num;
+	int digits;
 
-	rem = 0;
-	a = 0;
-
+	num = ((n < 0) ? (unsigned int)-n : (unsigned int)n);
+	digits = count_digits(num);
+	
+	if (!(str = ft_strnew(digits + ((n < 0) ? 1 : 0)))
+		return (NULL);
 	if (n < 0)
-		str[a++] = '-';
-	while (n)
-	{
-		str[a++] = (n < 9) ? (n + '0') : (num % 10) + '0';
-		n /= 10;
-	}
-	str[a] = '\0';
-	return (str);
+		str[0] = '-';
+	
+	while ((num /= 10) > 0)
+		str[--digits] = ((num < 9) ? num + '0' : (num % 10) + '0');	
+	
+	
 }
 
 int		main(void)
 {
-	char *s;
-
-	s = ft_itoa(285);
-	printf("%s\n", s);
+	printf("%d\n", (count_digits(-20))); 	
 	return (0);
 }

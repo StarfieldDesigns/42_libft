@@ -6,9 +6,11 @@
 /*   By: aholtzma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 17:05:43 by aholtzma          #+#    #+#             */
-/*   Updated: 2019/05/13 17:06:17 by aholtzma         ###   ########.fr       */
+/*   Updated: 2020/02/14 15:23:22 by aholtzma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 static int	ft_strlen(char *str)
 {
