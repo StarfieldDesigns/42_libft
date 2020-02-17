@@ -12,19 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_strlen(char *str)
-{
-	int len;
-
-	len = 0;
-	while (*str != '\0')
-	{
-		len++;
-		str++;
-	}
-	return (len);
-}
-
 char		*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int a;
