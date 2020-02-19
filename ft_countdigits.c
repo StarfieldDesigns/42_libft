@@ -1,7 +1,7 @@
 
 #include "libft.h"
 
-int		count_digits(unsigned int n)
+int		ft_countdigits(unsigned int n)
 {
 	int digits;
 

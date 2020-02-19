@@ -1,5 +1,5 @@
 NAME 		= libft.a
-FLAGS 		= -Wall -Werror -Wextra -c -I./includes
+FLAGS 		= -Wall -Werror -Wextra -c
 FILES 		= ./*.c
 
 all: $(NAME)

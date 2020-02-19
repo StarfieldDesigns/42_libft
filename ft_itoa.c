@@ -21,7 +21,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return ("0");
 	num = ((n < 0) ? (unsigned int)-n : (unsigned int)n);
-	digits = count_digits(num);
+	digits = ft_countdigits(num);
 	if (!(str = ft_strnew(digits + ((n < 0) ? 1 : 0))))
 		return (NULL);
 	if (n < 0)
